@@ -1,0 +1,13 @@
+#cloud-config
+datasource:
+ Ec2:
+  strict_id: false
+ssh_pwauth: no
+users:
+- name: yc-user
+  sudo: ALL=(ALL) NOPASSWD:ALL
+  shell: /bin/bash
+  ssh_authorized_keys:
+  - ssh-rsa ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCZtErUI52Ic0JBCnS8/LKnnyQ0q8siMh8ytevrq5l/+TqJapFJPN6Vx8313H/3/vVSMP1/+E3w2omPgB+B0rLp3XlO4wJcsHSTvgSvIc2OqNuTcq/Hw7w53VZFPB79I6BJ8WdHOGHFlATJb6+NPWTxPeTpZYRa/D7/lq15u1MpIPUKA6MgCiKmVIZEj5WaqC6ibccCtTdSEn5juo+sXxuwqAQHaWpTHfzDgK2RjdcmSBun8mJdWeifjEaljWLXdNvVRa4ffoC/2ajZadpgkZrryER1dBpD9ELA/QrCRyVJSN7mAX8NRyr1zKTb+Nop231FVIqO59Zolqd26Z1vtWDaiwddnzllo0kt1Srk9XMDuwKWvK8msLZvLtGd+VvTe/1Cl9IIorbiebMef0pVXo/egYXxRk2ROyhY7zxOrWOXSGlm7EQEo2+3PYe1IJRNBx5TmFIztPmTEfC3u6WhYqiA1IIRXPx/7GoFtEKTje8LFXiJXaBabCA+iJcdVKrO1jM= appuser
+runcmd:
+  - curl -o ruby_install.sh https://raw.githubusercontent.com/Otus-DevOps-2023-09/mikhailbelikov_infra/cloud-testapp/install_ruby.sh && \ curl -o mongodb_install.sh https://raw.githubusercontent.com/Otus-DevOps-2023-09/mikhailbelikov_infra/cloud-testapp/install_mongodb.sh && \ curl -o deploy.sh https://raw.githubusercontent.com/Otus-DevOps-2023-09/mikhailbelikov_infra/cloud-testapp/deploy.sh && \ sudo ./ruby_install.sh && \ sudo ./mongodb_install.sh && \ ./deploy.sh

@@ -37,7 +37,7 @@ https://vpn.belikov.tech/
 ## Основные сервисы Yandex Cloud
 
 ### Основное задание:
-testapp_IP = 84.252.130.27
+testapp_IP = 84.252.130.27 
 testapp_port = 9292 
 
 ### Дополнительное задание:

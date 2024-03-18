@@ -61,7 +61,7 @@ yc compute instance create \
 На первом этапе создан шаблон ubuntu16.json, с его помощью создается образ Ubuntu с предустановленными Ruby и MongoDB
 Далее была развернута ВМ из данного образа, внутри ВМ была осуществленна установка Reddit
 В файле variables.json.example описаны переменные для шаблона
-Создан .gitignore и в него добавлен variables.json.example
+Создан .gitignore и в него добавлен variables.json
 
 ### Дополнительное задание:
 immutable.json - шаблон для создания образа с предустановленным Ruby и MongoDB, так же с запуском Reddit.  

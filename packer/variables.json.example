@@ -1,0 +1,6 @@
+{
+    "service_account_key_file": "key.json",
+    "folder_id": "88888888888888",
+    "source_image_family": "88888888888888",
+    "subnet_id": "8888888888888888"
+}

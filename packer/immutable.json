@@ -1,20 +1,18 @@
 {
-  "builders": [
-    {
-      "type": "yandex",
-      "service_account_key_file": "{{ user `service_account_key_file`}}",
-      "folder_id": "{{ user `folder_id`}}",
-      "source_image_folder_id": "{{ user `folder_id`}}",
-      "source_image_family": "{{ user `source_image_family`}}",
-      "image_name": "reddit-full-{{timestamp}}",
-      "image_family": "reddit-full",
-      "ssh_username": "ubuntu",
-      "platform_id": "standard-v3",
-      "subnet_id": "{{ user `subnet_id`}}",
-      "zone": "{{ user `zone`}}",
-      "use_ipv4_nat": "{{ user `use_ipv4_nat`}}"
-    }
-  ],
+    "builders": [
+        {
+            "type": "yandex",
+            "service_account_key_file": "{{user `service_account_key_file`}}",
+            "folder_id": "{{user `folder_id`}}",
+            "source_image_family": "{{user `source_image_family`}}",
+            "image_name": "reddit-full-{{timestamp}}",
+            "image_family": "reddit-full",
+            "ssh_username": "ubuntu",
+            "platform_id": "standard-v1",
+            "use_ipv4_nat": "true",
+            "subnet_id": "{{user `subnet_id`}}" 
+        }
+    ],
     "provisioners": [
         {
             "type": "file",

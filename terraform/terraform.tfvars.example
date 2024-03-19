@@ -6,4 +6,4 @@ public_key_path          = "/home/user/.ssh/ubuntu.pub"
 private_key_path         = "/home/user/.ssh/ubuntu"
 subnet_id                = "ad97s867a9sd87as"
 service_account_key_file = "/root/.ssh/key.json"
-vm_count          = "2"
+vm_count          = 2

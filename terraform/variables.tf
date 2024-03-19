@@ -26,7 +26,7 @@ variable "private_key_path" {
   description = "Path to the private key used for ssh access"
 }
 
-variable "count_vm" {
+variable "vm_count" {
   description = "Count VM created"
   default = "1"
 }

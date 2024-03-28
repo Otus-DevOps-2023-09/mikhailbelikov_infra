@@ -104,3 +104,17 @@ storage-bucket.tf - удаленный бэкенд.
 *.tfstate создается и хранится в бакете.
 При тестах получаем - No changes. Your infrastructure matches the configuration Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
 Настройки добавлены в подпроекты prod и stage.
+
+## Управление конфигурацией. Знакомство с Ansible 
+
+### Основное задание:  
+Установка ansible  
+Настройка файла inventory
+Выполнен тест модулей ansible без плейбуков
+Настроен конфиг ansible.cfg 
+В файл inventory добавлены группы хостов
+Протестирован inventory.yaml
+Выполнены модули command, shell, service, git 
+Создан плейбук clone.yml
+Успешно выполнен плейбук clone.yaml
+ 

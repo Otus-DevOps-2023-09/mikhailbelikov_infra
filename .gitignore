@@ -5,3 +5,5 @@
 *.tfvars
 .terraform/
 /terraform/.terraform.lock.hcl
+/terraform/prod/.terraform.lock.hcl
+/terraform/stage/.terraform.lock.hcl

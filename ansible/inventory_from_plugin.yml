@@ -1,0 +1,11 @@
+all:
+  children:
+    _app:
+      hosts:
+        62.84.113.95:
+          ansible_host: 84.252.130.25
+    _db:
+      hosts:
+        130.193.38.250:
+          ansible_host: 158.160.110.122
+    ungrouped: {}

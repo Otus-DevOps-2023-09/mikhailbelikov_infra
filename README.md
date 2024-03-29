@@ -118,3 +118,21 @@ storage-bucket.tf - удаленный бэкенд.
 Создан плейбук clone.yml
 Успешно выполнен плейбук clone.yaml
  
+## Продолжение знакомства с Ansible: templates, handlers, dynamic inventory, vault, tags  
+
+### Основное задание:  
+Создан плейбук reddit_app.yml с настройкой MongoDB
+Добавлены handlers
+Создан плейбук reddit_app2.yml, для тестирования хостов и тегов
+Разбиты плейбуки и создан мастер плейбук site.yml, который позволяет полностью развернуть приложение
+reddit_app.yml ➡ reddit_app_one_play.yml
+reddit_app2.yml ➡ reddit_app_multiple_plays.yml
+
+### Дополнительное задание: 
+Установлен yc_compute
+Создан inventory_yc.yaml
+Командой ansible-inventory --list --yaml получаем актуальный инвентори из YC по тегу
+Созданы packer_app.yml и packer_db.yml
+Изменен provisions в parcker конфигах
+Созданы новые образы, проверена работоспособность
+

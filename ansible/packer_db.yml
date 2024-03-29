@@ -1,0 +1,30 @@
+---
+- name: Install MongoDB
+  hosts: all
+  become: true
+  vars:
+    mongo_bind_ip: 0.0.0.0
+  tasks:
+  
+  - name: Update and upgrade apt packages
+    become: true
+    apt:
+      upgrade: yes
+      update_cache: yes
+
+  - name: Install mongodb
+    apt:
+      name: mongodb
+      state: present
+
+  - name: Change mongo config file
+    template:
+      src: templates/mongod.conf.j2
+      dest: /etc/mongodb.conf
+      mode: 0644
+
+  - name: Enable and restart mongodb
+    systemd:
+      name: mongodb
+      state: restarted
+      enabled: yes

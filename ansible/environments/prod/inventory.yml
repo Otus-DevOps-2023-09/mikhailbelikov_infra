@@ -3,10 +3,10 @@ app:
   children:
     appserver:
       hosts:
-        84.252.130.25:
+        51.250.13.25:
 db:
   hosts:
   children:
     dbserver:
       hosts:
-        158.160.110.122:
+        62.84.126.17:

@@ -8,3 +8,5 @@
 /terraform/prod/.terraform.lock.hcl
 /terraform/stage/.terraform.lock.hcl
 *.retry
+jdauphant.nginx
+vault.key

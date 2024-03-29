@@ -3,9 +3,9 @@ all:
     _app:
       hosts:
         62.84.113.95:
-          ansible_host: 84.252.130.25
+          ansible_host: 62.84.113.13
     _db:
       hosts:
-        130.193.38.250:
-          ansible_host: 158.160.110.122
+        130.193.38.65:
+          ansible_host: 130.193.38.156
     ungrouped: {}

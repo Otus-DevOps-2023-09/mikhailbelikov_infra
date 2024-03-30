@@ -1,0 +1,17 @@
+---
+  - name: Update and upgrade apt packages
+    become: true
+    apt:
+      upgrade: yes
+      update_cache: yes
+
+  - name: Install mongodb
+    apt:
+      name: mongodb
+      state: present
+
+  - name: Enable and restart mongodb
+    systemd:
+      name: mongodb
+      state: restarted
+      enabled: yes

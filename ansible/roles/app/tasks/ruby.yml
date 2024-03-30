@@ -1,0 +1,9 @@
+---
+  - name: Install Ruby && Bundler
+    package:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - ruby-full
+      - ruby-bundler
+      - build-essential
